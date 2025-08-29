@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Table Reservation</title>
+  <link rel="stylesheet" href="ReservTT.css" />
+</head>
+<body>
+
+  <!-- Reservation Form -->
+  <div class="reservation-container" id="reservation-form">
+    <h1>Reserve a Table</h1>
+    <p class="note">
+      Note: VIP Room price is P3000, P2500 consumable. Downpayment of P1500 is required via GCASH only.
+    </p>
+    <form onsubmit="showPaymentForm(event)">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="date" name="date" required />
+      <input type="time" name="time" required />
+      <select name="people" required>
+        <option value="">Number of People</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="more">More than 6</option>
+      </select>
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
+
+  <!-- Payment Confirmation Form -->
+  <div class="payment-container hidden" id="payment-form">
+    <h2>GCASH Payment</h2>
+    <p>Please send <strong>P1500</strong> to this GCASH number:</p>
+    <p><strong>0917 123 4567</strong></p>
+    <img src="./images/qrG.png" alt="GCASH QR Code" />
+    <p>Once payment is done, click below to confirm and receive your ticket.</p>
+    <button class="confirm-button">I Have Paid</button>
+  </div>
+
+  <!-- Ticket Display -->
+  <div class="ticket-container hidden" id="ticket-form">
+    <h2>Reservation Ticket</h2>
+    <p><strong>Name:</strong> <span id="ticket-name"></span></p>
+    <p><strong>Contact:</strong> <span id="ticket-phone"></span></p>
+    <p><strong>Date:</strong> <span id="ticket-date"></span></p>
+    <p><strong>Time:</strong> <span id="ticket-time"></span></p>
+    <p><strong>People:</strong> <span id="ticket-people"></span></p>
+    <p><strong>Downpayment:</strong> Paid via GCASH (₱1500)</p>
+    <p><em>Please show this ticket upon arrival.</em></p>
+    <button class="done-button">DONE</button>
+  </div>
+
+  <!-- Background Image -->
+  <div class="background-image"></div>
+
+  <!-- JavaScript -->
+  <script>
+    function showPaymentForm(event) {
+      event.preventDefault();
+      document.getElementById("reservation-form").style.display = "none";
+      document.getElementById("payment-form").classList.remove("hidden");
+    }
+
+    document.querySelector(".confirm-button").addEventListener("click", function () {
+      const name = document.querySelector('input[name="name"]').value;
+      const phone = document.querySelector('input[name="phone"]').value;
+      const date = document.querySelector('input[name="date"]').value;
+      const time = document.querySelector('input[name="time"]').value;
+      const people = document.querySelector('select[name="people"]').value;
+
+      document.getElementById("ticket-name").textContent = name;
+      document.getElementById("ticket-phone").textContent = phone;
+      document.getElementById("ticket-date").textContent = date;
+      document.getElementById("ticket-time").textContent = time;
+      document.getElementById("ticket-people").textContent = people + (people === "more" ? "+" : "");
+
+      document.getElementById("payment-form").classList.add("hidden");
+      document.getElementById("ticket-form").classList.remove("hidden");
+    });
+
+    document.querySelector(".done-button").addEventListener("click", function () {
+    alert("Thank you! Your reservation has been recorded.");
+    window.location.href = "dashboard.html"; // redirect to dashboard
+    });
+
+  </script>
+</body>
+</html>

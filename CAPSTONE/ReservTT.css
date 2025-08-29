@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.background-image {
+  background-image: url('./images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.reservation-container,
+.payment-container,
+.ticket-container {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.reservation-container {
+  background-color: #ff7e00;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.payment-container h2,
+.ticket-container h2 {
+  color: #333;
+}
+
+.note {
+  font-size: 12px;
+  color: black;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffb300;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e69c00;
+}
+
+.confirm-button {
+  background-color: #4CAF50;
+}
+
+.confirm-button:hover {
+  background-color: #45a049;
+}
+
+.ticket-container {
+  text-align: left;
+  border-radius: 15px;
+}
+
+.ticket-container p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.done-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #ffb300;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.done-button:hover {
+  background-color: #e69c00;
+}
+
+.hidden {
+  display: none;
+}
+
+.payment-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+}

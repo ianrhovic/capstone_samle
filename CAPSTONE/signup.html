@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Brisk n' Brew Cafe</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg" />
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Your Account</h2>
+    <form id="signup-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required />
+      </div>
+      <button type="submit" class="signup-button">Sign Up</button>
+    </form>
+
+    <!-- Message box (for errors/success) -->
+    <div id="message-box" class="message-box"></div>
+
+    <p class="login-prompt">
+      Already have an account? <a href="login.html">Log In</a>
+    </p>
+    <p class="back-home-prompt">
+      <a href="ui.html">Back to Home</a>
+    </p>
+  </div>
+
+  <div class="background-image"></div>
+
+  <script>
+    const form = document.getElementById("signup-form");
+    const messageBox = document.getElementById("message-box");
+
+    function showMessage(message, type) {
+      messageBox.textContent = message;
+      messageBox.className = `message-box ${type}`;
+      messageBox.style.display = "block";
+    }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      if (password !== confirmPassword) {
+        showMessage("❌ Passwords do not match.", "error");
+        return;
+      }
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      const userExists = users.some(
+        user => user.username === username || user.email === email
+      );
+
+      if (userExists) {
+        showMessage("⚠️ Username or email already exists.", "error");
+        return;
+      }
+
+      users.push({ username, email, password });
+      localStorage.setItem("users", JSON.stringify(users));
+
+      showMessage("✅ Signup successful! Redirecting to login...", "success");
+
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 1500); // wait 1.5 seconds then redirect
+    });
+  </script>
+</body>
+</html>

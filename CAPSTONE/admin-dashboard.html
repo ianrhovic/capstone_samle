@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Dashboard - Brisk n' Brew Cafe</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <link rel="icon" href="images/logo.jpeg">
+</head>
+<body>
+    <div class="background-image"></div>
+
+    <div class="header-top">
+        <div class="logo">
+            <img src="./images/logo.jpeg" alt="Brisk n' Brew Cafe Logo">
+        </div>
+        <div class="user-logout-section">
+            <div class="user-dashboard-header">
+                <span id="displayedUsername">Welcome, Admin!</span>
+            </div>
+            <button class="logout-btn" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <div class="content-area">
+        <div class="welcome-container">
+            <p class="heading">Admin Access</p>
+            <h1 class="cafe-name">Brisk n' Brew Cafe</h1>
+            <p class="slogan">bigger place with bigger taste</p>
+        </div>
+
+        <div class="admin-buttons-grid">
+            <button class="admin-menu-btn" onclick="goTo('manageMenu')">
+                <div class="admin-icon">📋</div>
+                Manage Menu
+            </button>
+            <button class="admin-menu-btn" onclick="goTo('viewReservations')">
+                <div class="admin-icon">📅</div>
+                View Reservations
+            </button>
+            <button class="admin-menu-btn" onclick="goTo('userAccounts')">
+                <div class="admin-icon">👥</div>
+                User Accounts
+            </button>
+            <button class="admin-menu-btn" onclick="goTo('viewFeedbacks')">
+                <div class="admin-icon">💬</div>
+                View Feedbacks
+            </button>
+            <button class="admin-menu-btn" onclick="goTo('manageOrders')">
+                <div class="admin-icon">📦</div>
+                Manage Orders
+            </button>
+            </div>
+    </div>
+
+    <div class="social-logos">
+        <a href="https://www.facebook.com/bakeandbrew.manila" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook Logo">
+        </a>
+        <a href="https://www.instagram.com/brisknbrew.manila?igsh=NDltOGJjMjU3MHVz" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lv-iEOWtRxGDqsOR-Pa1kIiqN298569zVA&s" alt="Instagram Logo">
+        </a>
+        <a href="https://www.tiktok.com/@brisknbrew?is_from_webapp=1&sender_device=pc" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/006/057/996/non_2x/tiktok-logo-on-transparent-background-free-vector.jpg" alt="TikTok Logo">
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('loggedInUser'));
+            const displayedUsername = document.getElementById('displayedUsername');
+            if (user && user.username === "admin") {
+                displayedUsername.textContent = `Welcome, Admin!`;
+            } else if (user && user.username) {
+                const formatted = user.username
+                    .split(' ')
+                    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                    .join(' ');
+                displayedUsername.textContent = `Welcome, ${formatted}!`;
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+
+        function goTo(action) {
+            switch(action) {
+                case 'manageMenu':
+                    window.location.href = 'manage-menu.html';
+                    break;
+                case 'viewReservations':
+                    window.location.href = 'reservations.html';
+                    break;
+                case 'userAccounts':
+                    window.location.href = 'user-accounts.html';
+                    break;
+                case 'viewFeedbacks':
+                    window.location.href = 'feedbacks.html';
+                    break;
+                // New Case for Manage Orders
+                case 'manageOrders':
+                    window.location.href = 'manage-orders.html'; // Assuming you'll create this page
+                    break;
+                //-------------------------
+            }
+        }
+
+        function logout() {
+            const confirmLogout = confirm("Are you sure you want to log out?");
+            if (confirmLogout) {
+                localStorage.removeItem('loggedInUser');
+                window.location.href = "ui.html";
+            }
+        }
+    </script>
+</body>
+</html>

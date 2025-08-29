@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverage Menu - Brisk n' Brew Cafe</title>
+    <link rel="stylesheet" href="style.css"> <!-- For shared background -->
+    <link rel="stylesheet" href="beverage.css"> <!-- For beverage menu specific styles -->
+    <link rel="icon" href="images/logo.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="beverages-page-wrapper">
+        <!-- Left Sidebar - Category Navigation -->
+        <div class="category-sidebar">
+            <a href="dashboard.html" class="back-button">← Back to Dashboard</a>
+            <a href="food.html" class="food-button">🍔 Food</a>
+            <div class="sidebar-title">Beverage Categories</div>
+            <ul class="category-buttons">
+                <li><a href="#" data-category="caffeine">CAFFEINE</a></li>
+                <li><a href="#" data-category="frappe">FRAPPE</a></li>
+                <li><a href="#" data-category="ice-cream-fudge">ICE CREAM FUDGE SERIES</a></li>
+                <li><a href="#" data-category="fruit-tea">FRUIT TEA</a></li>
+                <li><a href="#" data-category="lemonade">LEMONADE</a></li>
+                <li><a href="#" data-category="fruit-soda">FRUIT SODA POP</a></li>
+                <li><a href="#" data-category="yakult-fruit-tea">YAKULT FRUIT TEA SERIES</a></li>
+                <li><a href="#" data-category="milktea">MILKTEA</a></li>
+                <li><a href="#" data-category="milk-drink">MILK DRINK</a></li>
+                <li><a href="#" data-category="waffle">WAFFLE</a></li>
+                <li><a href="#" data-category="add-ons">ADD ONS</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Main Content Area - Scrollable Menu -->
+        <div class="main-beverages-content">
+            <h1>Our Refreshing Beverages</h1>
+
+            <!-- CAFFEINE Section -->
+            <div id="caffeine-content" class="menu-category-content active-category">
+                <h2>CAFFEINE</h2>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">AMERICANO</span>
+                        <span class="beverage-price">Hot: P100</span>
+                        <span class="beverage-price">Iced (22oz): P110</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">VANILLA SWEET CREAM</span>
+                        <span class="beverage-price">Hot: P110</span>
+                        <span class="beverage-price">Iced (22oz): P130</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">SPANISH LATTE</span>
+                        <span class="beverage-price">Hot: P110</span>
+                        <span class="beverage-price">Iced (22oz): P130</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CARAMEL MACHIATTO</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">HAZELNUT LATTE</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MATCHA LATTE</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">DIRTY MATCHA</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">SALTED CARAMEL</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MOCHA</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">TOFFEENUT</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">WHITE MOCHA</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">DARK CHOCOLATE</span>
+                        <span class="beverage-price">Hot: P120</span>
+                        <span class="beverage-price">Iced (22oz): P140</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BNB COFFEE JELLY</span>
+                        <span class="beverage-price">P160</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BNB COFFEE FLOAT</span>
+                        <span class="beverage-price">P180</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAPPE Section -->
+            <div id="frappe-content" class="menu-category-content">
+                <h2>FRAPPE</h2>
+                <h3>Coffee Based</h3>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">MOCHA</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CAPPUCINO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">HAZELNUT</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BLACK FOREST</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">SALTED CARAMEL</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CARAMEL MACHIATTO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">PEPPERMINT MOCHA</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">WHITE CHOCO MOCHA</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">JAVACHIP</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MOCHACCINO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">TOFFEENUT</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                </div>
+
+                <h3>Non-Coffee Based</h3>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">TARO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">DARK CHOCO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">VANILLA</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">ROCKY ROAD</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MATCHA</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CARAMEL</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MILO DINO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MANGO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">STRAWBERRY</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BLUEBERRY</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CHOCOCHIP</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">VANILLA CHIP</span>
+                        <span class="beverage-price">22oz: P115</span>
+                        <span class="beverage-price">1L: P195</span>
+                    </div>
+                </div>
+
+                <h3>PREMIUM Frappe</h3>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">FUDGE BROWNIE</span>
+                        <span class="beverage-price">22oz: P155</span>
+                        <span class="beverage-price">1L: P245</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO CARAMEL</span>
+                        <span class="beverage-price">22oz: P155</span>
+                        <span class="beverage-price">1L: P245</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO MATCHA</span>
+                        <span class="beverage-price">22oz: P155</span>
+                        <span class="beverage-price">1L: P245</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO TARO</span>
+                        <span class="beverage-price">22oz: P155</span>
+                        <span class="beverage-price">1L: P245</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO BERRY</span>
+                        <span class="beverage-price">22oz: P155</span>
+                        <span class="beverage-price">1L: P245</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">DARK OREO</span>
+                        <span class="beverage-price">22oz: P155</span>
+                        <span class="beverage-price">1L: P245</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">NUTELLLA MUDSLIDE</span>
+                        <span class="beverage-price">22oz: P155</span>
+                        <span class="beverage-price">1L: P245</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BISCOFF</span>
+                        <span class="beverage-price">22oz: P165</span>
+                        <span class="beverage-price">1L: P255</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">VANILLA OREO BISCOFF</span>
+                        <span class="beverage-price">22oz: P185</span>
+                        <span class="beverage-price">1L: P275</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ICE CREAM FUDGE SERIES Section -->
+            <div id="ice-cream-fudge-content" class="menu-category-content">
+                <h2>ICE CREAM FUDGE SERIES</h2>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">ALMOND FUDGE</span>
+                        <span class="beverage-price">22oz: P185</span>
+                        <span class="beverage-price">1L: P285</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO FUDGE</span>
+                        <span class="beverage-price">22oz: P185</span>
+                        <span class="beverage-price">1L: P285</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO MATCHA</span>
+                        <span class="beverage-price">22oz: P185</span>
+                        <span class="beverage-price">1L: P285</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CARAMEL FUDGE</span>
+                        <span class="beverage-price">22oz: P185</span>
+                        <span class="beverage-price">1L: P285</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MANGO FUDGE</span>
+                        <span class="beverage-price">22oz: P185</span>
+                        <span class="beverage-price">1L: P285</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRUIT TEA Section -->
+            <div id="fruit-tea-content" class="menu-category-content">
+                <h2>FRUIT TEA <small>with Free Sinkers</small></h2>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">LYCHEE</span>
+                        <span class="beverage-price">22oz: P100</span>
+                        <span class="beverage-price">1L: P170</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">STRAWBERRY</span>
+                        <span class="beverage-price">22oz: P100</span>
+                        <span class="beverage-price">1L: P170</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BLUEBERRY</span>
+                        <span class="beverage-price">22oz: P100</span>
+                        <span class="beverage-price">1L: P170</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MANGO</span>
+                        <span class="beverage-price">22oz: P100</span>
+                        <span class="beverage-price">1L: P170</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">GREEN APPLE</span>
+                        <span class="beverage-price">22oz: P100</span>
+                        <span class="beverage-price">1L: P170</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">GRAPES</span>
+                        <span class="beverage-price">22oz: P100</span>
+                        <span class="beverage-price">1L: P170</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEMONADE Section -->
+            <div id="lemonade-content" class="menu-category-content">
+                <h2>LEMONADE</h2>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">LEMON ICED TEA</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">PINK LEMONADE</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BLUE LEMONADE</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CUCUMBER LEMONADE</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">YELLOW LEMONADE</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRUIT SODA POP Section -->
+            <div id="fruit-soda-content" class="menu-category-content">
+                <h2>FRUIT SODA POP</h2>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">LYCHEE</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">STRAWBERRY</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">GRAPES</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">GREEN APPLE</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BLUEBERRY</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MANGO</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P220</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YAKULT FRUIT TEA SERIES Section -->
+            <div id="yakult-fruit-tea-content" class="menu-category-content">
+                <h2>YAKULT FRUIT TEA SERIES</h2>
+                <div class="menu-items-grid-container">
+                    <div class="beverage-item">
+                        <span class="beverage-name">LYCHEE</span>
+                        <span class="beverage-price">22oz: P150</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">STRAWBERRY</span>
+                        <span class="beverage-price">22oz: P150</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">GRAPES</span>
+                        <span class="beverage-price">22oz: P150</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">GREEN APPLE</span>
+                        <span class="beverage-price">22oz: P150</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">BLUEBERRY</span>
+                        <span class="beverage-price">22oz: P150</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MANGO</span>
+                        <span class="beverage-price">22oz: P150</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">LEMON YAKULT</span>
+                        <span class="beverage-price">22oz: P150</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MILKTEA Section -->
+            <div id="milktea-content" class="menu-category-content">
+                <h2>MILKTEA <small>with Sinkers</small></h2>
+                <div class="menu-items-grid-container price-variant-grid">
+                    <div class="beverage-item">
+                        <span class="beverage-name">CLASSIC</span>
+                        <span class="beverage-price">22oz: P100</span>
+                        <span class="beverage-price">1L: P170</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CHOCOLATE</span>
+                        <span class="beverage-price">22oz: P110</span>
+                        <span class="beverage-price">1L: P180</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">CARAMEL</span>
+                        <span class="beverage-price">22oz: P110</span>
+                        <span class="beverage-price">1L: P180</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">STRAWBERRY</span>
+                        <span class="beverage-price">22oz: P110</span>
+                        <span class="beverage-price">1L: P180</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">TARO</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P190</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">MATCHA</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P190</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OREO</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P190</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">WINTERMELON</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P190</span>
+                    </div>
+                    <div class="beverage-item">
+                        <span class="beverage-name">OKINAWA BROWNSUGAR</span>
+                        <span class="beverage-price">22oz: P120</span>
+                        <span class="beverage-price">1L: P190</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MILK DRINK Section -->
+            <div id="milk-drink-content" class="menu-category-content">
+                <h2>MILK DRINK <small>22oz</small></h2>
+                <div class="menu-items-grid-container">
+                    <div class="beverage-item">
+                        <p class="beverage-name">STRAWBERRY</p>
+                        <p class="beverage-price">P135</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">BLUEBERRY</p>
+                        <p class="beverage-price">P135</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">MANGO</p>
+                        <p class="beverage-price">P135</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">CHOCOLATE</p>
+                        <p class="beverage-price">P135</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">BROWNSUGAR</p>
+                        <p class="beverage-price">P145</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">TARO LATTE</p>
+                        <p class="beverage-price">P145</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">BERRY MATCHA</p>
+                        <p class="beverage-price">P155</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">OREO TARO LATTE</p>
+                        <p class="beverage-price">P155</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WAFFLE Section -->
+            <div id="waffle-content" class="menu-category-content">
+                <h2>WAFFLE <small>Served w/ Ice Cream</small></h2>
+                <div class="menu-items-grid-container">
+                    <div class="beverage-item">
+                        <p class="beverage-name">CHOCOLATE</p>
+                        <p class="beverage-price">P130</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">CARAMEL</p>
+                        <p class="beverage-price">P130</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">OREO</p>
+                        <p class="beverage-price">P140</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">MANGO</p>
+                        <p class="beverage-price">P140</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">STRAWBERRY</p>
+                        <p class="beverage-price">P140</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">BLUEBERRY</p>
+                        <p class="beverage-price">P140</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">NUTELLA</p>
+                        <p class="beverage-price">P170</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">BISCOFF</p>
+                        <p class="beverage-price">P170</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADD ONS Section -->
+            <div id="add-ons-content" class="menu-category-content">
+                <h2>ADD ONS</h2>
+                <div class="menu-items-grid-container">
+                    <div class="beverage-item">
+                        <p class="beverage-name">PEARL</p>
+                        <p class="beverage-price">P20</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">NATA</p>
+                        <p class="beverage-price">P20</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">CREAM CHEESE</p>
+                        <p class="beverage-price">P20</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">CHOCOCHIP</p>
+                        <p class="beverage-price">P25</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">COFFEE JELLY</p>
+                        <p class="beverage-price">P25</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">OREO</p>
+                        <p class="beverage-price">P20</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">SAUCE DRIZZLE</p>
+                        <p class="beverage-price">P20</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">POPPING BOBBA</p>
+                        <p class="beverage-price">P25</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">ESPRESSO SHOT</p>
+                        <p class="beverage-price">P25</p>
+                    </div>
+                    <div class="beverage-item">
+                        <p class="beverage-name">WHIPPED CREAM</p>
+                        <p class="beverage-price">P25</p>
+                    </div>
+                </div>
+            </div>
+        </div> </div> <div class="background-image"></div>
+            <!-- Cart Button -->
+ <button class="cart-button" onclick="openCart()">🛒 See My Cart</button>
+</div>
+
+<!-- Shared Product Popup -->
+<div id="itemPopup" class="food-popup hidden">
+  <div class="popup-content">
+    <span class="close-popup" onclick="closePopup()">&times;</span>
+    <h2 id="popupItemName">Item Name</h2>
+    <p id="popupItemPrice">Price: P0</p>
+    <div class="quantity-controls">
+      <button onclick="changeQuantity(-1)">−</button>
+      <span id="quantity">1</span>
+      <button onclick="changeQuantity(1)">+</button>
+    </div>
+    <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+  </div>
+</div>
+
+<!-- Shared Cart Modal -->
+<div id="cartModal" class="cart-modal hidden">
+  <div class="cart-modal-content">
+    <span class="close-cart" onclick="closeCart()">&times;</span>
+    <h2>My Cart</h2>
+    <ul id="cartItemsList" class="cart-list"></ul>
+    <p id="cartTotal">Total: P0</p>
+    <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+
+<!-- Friendly Reminder Modal -->
+<div id="reminderModal" class="reminder-modal hidden">
+  <div class="reminder-content">
+    <span class="close-reminder" onclick="closeReminder()">&times;</span>
+    <h2>Friendly Reminder from Brisk n' Brew ☕</h2>
+    <p>
+      To ensure the best quality of our products, some items like beverages may not be available
+      for delivery to locations more than 5 kilometers from our store.
+      <br><br>
+      Thank you for your understanding and support!
+    </p>
+    <button onclick="closeReminder()">Okay, Got it</button>
+  </div>
+</div>
+
+<!-- Keep your existing category filtering script here -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('.category-buttons a');
+    const menuCategoryContents = document.querySelectorAll('.menu-category-content');
+
+    const showCategory = (categoryName) => {
+        menuCategoryContents.forEach(content => {
+            content.classList.remove('active-category');
+        });
+
+        const selectedCategory = document.getElementById(`${categoryName}-content`);
+        if (selectedCategory) {
+            selectedCategory.classList.add('active-category');
+            const mainContent = document.querySelector('.main-beverages-content');
+            if (mainContent) {
+                mainContent.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
+
+    const setActiveButton = (clickedButton) => {
+        categoryButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+        clickedButton.classList.add('active');
+    };
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            const category = button.dataset.category;
+            showCategory(category);
+            setActiveButton(button);
+        });
+    });
+
+    const defaultCategory = 'caffeine';
+    const defaultButton = document.querySelector(`.category-buttons a[data-category="${defaultCategory}"]`);
+
+    if (defaultButton) {
+        showCategory(defaultCategory);
+        setActiveButton(defaultButton);
+    }
+});
+</script>
+
+<script src="cart.js"></script>
+<script>
+// Store location (Brisk n Brew Cafe)
+const storeCoords = { lat: 14.5776, lng: 120.9944 }; 
+// Manila San Andres Bukid approx coords (your address)
+
+function toRad(value) {
+  return value * Math.PI / 180;
+}
+
+function calculateDistance(lat1, lon1, lat2, lon2) {
+  const R = 6371; // km
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+            Math.sin(dLon/2) * Math.sin(dLon/2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return R * c;
+}
+
+// Show the reminder modal
+function showReminder() {
+  document.getElementById("reminderModal").classList.remove("hidden");
+}
+function closeReminder() {
+  document.getElementById("reminderModal").classList.add("hidden");
+}
+
+// Auto-check distance when page loads
+document.addEventListener("DOMContentLoaded", () => {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const distance = calculateDistance(
+        storeCoords.lat, storeCoords.lng,
+        position.coords.latitude, position.coords.longitude
+      );
+
+      if (distance > 5) {
+        showReminder();
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>
